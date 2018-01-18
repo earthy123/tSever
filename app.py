@@ -6,8 +6,8 @@ from werkzeug import secure_filename
 app = Flask(__name__)
 
 
-
-app.config['ALLOWED_EXTENSIONS'] = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
+#
+#app.config['ALLOWED_EXTENSIONS'] = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
 #
 #def allowed_file(filename):
