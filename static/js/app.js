@@ -17,7 +17,7 @@ $(function() {
             $("#resultFilename").text(data['name']);
             $("#resultFilesize").text(data['size']);
             $("#resImg").attr({
-              src: "upload/test.jpg",
+              src: "static/upload/capture8.jpg",
               title: "jQuery",
               alt: "jQuery Logo"
             });
