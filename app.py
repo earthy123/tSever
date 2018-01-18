@@ -1,8 +1,7 @@
 from flask import Flask, request, redirect, url_for, render_template,jsonify
 from werkzeug import secure_filename
-import os
-import sys
-basedir = os.path.abspath(os.path.dirname(__file__))
+
+
 
 app = Flask(__name__)
 
@@ -10,10 +9,10 @@ app = Flask(__name__)
 
 app.config['ALLOWED_EXTENSIONS'] = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
-
-def allowed_file(filename):
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1] in app.config['ALLOWED_EXTENSIONS']
+#
+#def allowed_file(filename):
+#    return '.' in filename and \
+#           filename.rsplit('.', 1)[1] in app.config['ALLOWED_EXTENSIONS']
 
 
 #@app.context_processor
