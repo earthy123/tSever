@@ -2,8 +2,8 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
-def index():
-  return 'Hey '
+def hello_world():
+  return 'Hey'
 
 if __name__ == '__main__':
   app.run()
