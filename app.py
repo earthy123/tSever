@@ -63,17 +63,17 @@ def index():
     return render_template('index.html')
 #
 #
-@app.route('/uploadajax', methods=['POST'])
-def upldfile():
-    if request.method == 'POST':
-        files = request.files['file']
-        if files and allowed_file(files.filename):
-            filename = secure_filename(files.filename)
-            app.logger.info('FileName: ' + filename)
-            updir = os.path.join(basedir, 'upload/')
-            files.save(os.path.join(updir, filename))
-            file_size = os.path.getsize(os.path.join(updir, filename))
-            return jsonify(name=filename, size=file_size)
+#@app.route('/uploadajax', methods=['POST'])
+#def upldfile():
+#    if request.method == 'POST':
+#        files = request.files['file']
+#        if files and allowed_file(files.filename):
+#            filename = secure_filename(files.filename)
+#            app.logger.info('FileName: ' + filename)
+#            updir = os.path.join(basedir, 'upload/')
+#            files.save(os.path.join(updir, filename))
+#            file_size = os.path.getsize(os.path.join(updir, filename))
+#            return jsonify(name=filename, size=file_size)
 
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 if __name__ == '__main__':
