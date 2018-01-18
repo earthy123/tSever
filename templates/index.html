@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+
+</head>
+<body>
+
+<form id="uploadform" method="post" enctype="multipart/form-data">
+    <label for="file">Select asss file</label>
+    <input name="file" type="file">
+    <button id="submit" type="button">Upload</button>
+</form>
+<p>Result Filename:&nbsp;<span id="resultFilename"> here</span></p>
+<p>Result Filesize:&nbsp;<span id="resultFilesize">here</span></p>
+<img id="resImg" src="" alt="">
+
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+<script  src="{{url_for('static',filename='js/app.js')}}"></script>
+</body>
+</html>
