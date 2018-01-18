@@ -1,11 +1,4 @@
-from flask import (
-    Flask,
-    request,
-    render_template,
-    send_from_directory,
-    url_for,
-    jsonify
-)
+from flask import Flask, request, redirect, url_for, render_template,jsonify
 from werkzeug import secure_filename
 import os
 import sys
@@ -60,7 +53,8 @@ def allowed_file(filename):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return "Hey"
+#    return render_template('index.html')
 #
 #
 #@app.route('/uploadajax', methods=['POST'])
@@ -75,6 +69,6 @@ def index():
 #            file_size = os.path.getsize(os.path.join(updir, filename))
 #            return jsonify(name=filename, size=file_size)
 
-app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+#app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 if __name__ == '__main__':
     app.run(debug=True)
