@@ -6,4 +6,4 @@ def hello_world():
     return 'Hey'
 
 if __name__ == '__main__':
-  app.run()
+  app.run(debug=True)
